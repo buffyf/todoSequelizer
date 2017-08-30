@@ -1,0 +1,87 @@
+    * {
+        text-align: left;
+    }
+    
+    body {
+        background: #969e97;
+    }
+    
+    .wrapper {
+        margin: 0 320px;
+        border-radius: 10px;
+        color: #444140;
+        background-color: #878E88;
+        font-family: 'Luckiest Guy', cursive;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .input {
+        font-family: 'Shadows Into Light Two', cursive;
+        font-size: 2rem;
+        background-color: #D4DFC7;
+        border-radius: 10px;
+        margin: 10px 4px;
+        padding: 3px 25px 3px 40px;
+        background-color: #96C0B7;
+        width: 500px;
+        border: none;
+    }
+    
+    .button {
+        border-radius: 50px;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 20px;
+        background: #7087aa;
+        padding: 10px 20px 10px 20px;
+        text-decoration: none;
+        border: none;
+    }
+    
+    .button:hover {
+        background: lightgray;
+        text-decoration: none;
+    }
+    
+    .doneButton {
+        float: right;
+        border-radius: 50px;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 20px;
+        background: #7087aa;
+        padding: 10px 20px 10px 20px;
+        text-decoration: none;
+        border: none;
+    }
+    
+    .doneButton:hover {
+        background: lightgray;
+        text-decoration: none;
+    }
+    
+    ul {
+        list-style-type: none;
+        margin: 5px;
+        width: 500px;
+    }
+    
+    .todo-list {
+        font-family: 'Shadows Into Light Two', cursive;
+        font-size: 2rem;
+        background-color: #D4DFC7;
+        border-radius: 10px;
+        margin: 8px;
+        padding: 3px 25px 3px 40px;
+    }
+    
+    .done {
+        font-family: 'Shadows Into Light Two', cursive;
+        font-size: 2rem;
+        background-color: #FEF6C9;
+        border-radius: 10px;
+        margin: 8px;
+        padding: 3px 25px 3px 40px;
+    }

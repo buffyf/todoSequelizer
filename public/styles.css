@@ -23,7 +23,7 @@
         font-size: 2rem;
         background-color: #D4DFC7;
         border-radius: 10px;
-        margin: 10px 4px;
+        margin: 20px 4px;
         padding: 3px 25px 3px 40px;
         background-color: #96C0B7;
         width: 500px;
@@ -46,18 +46,6 @@
         text-decoration: none;
     }
     
-    .updateButton {
-        float: right;
-        border-radius: 50px;
-        font-family: Arial;
-        color: #ffffff;
-        font-size: 20px;
-        background: #7087aa;
-        padding: 10px 20px 10px 20px;
-        text-decoration: none;
-        border: none;
-    }
-    
     .doneButton {
         float: right;
         border-radius: 50px;
@@ -68,6 +56,7 @@
         padding: 10px 20px 10px 20px;
         text-decoration: none;
         border: none;
+        margin: 3px;
     }
     
     .doneButton:hover {
@@ -81,12 +70,18 @@
         width: 500px;
     }
     
+    .item {
+        display: flex;
+        justify-content: flex-start;
+    }
+    
     .todo-list {
         font-family: 'Shadows Into Light Two', cursive;
         font-size: 2rem;
         background-color: #D4DFC7;
         border-radius: 10px;
         margin: 8px;
+        width: 500px;
         padding: 3px 25px 3px 40px;
     }
     

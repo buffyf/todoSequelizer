@@ -18,22 +18,22 @@
         </form>
         <h1>To Do:</h1>
         <wrapper>
-            <ul>
+            <ul class="todo-lists">
                 {{#item}}{{^is_complete}}
-                <form action="/completed" method="POST">
-                    <button class="doneButton" name="item" type="submit" value="{{item}}">✓</button>
-                </form>
 
-                <form action="/deleteOne" method="POST">
-                    <button class="button" name="item" value="{{item}}">X</button>
-                </form>
-
-
-                <li class="todo-list">
-                    {{item}}
+                <li class="item">
+                    <section class="todo-list">
+                        <form action="/completed" method="POST">
+                            <button class="doneButton" name="item" type="submit" value="{{item}}">✓</button>
+                        </form>
+                        <form action="/deleteOne" method="POST">
+                            <button class="doneButton" name="item" value="{{item}}">X</button> {{item}}
+                        </form>
+                    </section>
+                    {{/is_complete}}{{/item}}
                 </li>
 
-                {{/is_complete}}{{/item}}
+
             </ul>
         </wrapper>
         <h1>Done:</h1>

@@ -12,27 +12,41 @@
 
 <body>
     <section class="wrapper">
-        <form class="entry" action="/" method="post">
-            <input class="input" type="text" name="title" placeholder="I need to..." required>
+        <form class="entry" action="/toDoList" method="post">
+            <input class="input" type="text" name="item" placeholder="I need to..." required>
             <button class="button" type="submit">+</button>
         </form>
         <h1>To Do:</h1>
-        <ul>
-            {{#incomplete}}
-            <li class="todo-list">
-                <form action="/todos/{{id}}" method="POST">
-                    <input class="doneButton" type="submit" value="x"></form> {{title}}
-            </li>
-            {{/incomplete}}
-        </ul>
+        <wrapper>
+            <ul>
+                {{#item}}{{^is_complete}}
+                <form action="/completed" method="POST">
+                    <button class="doneButton" name="item" type="submit" value="{{item}}">✓</button>
+                </form>
+
+                <form action="/deleteOne" method="POST">
+                    <button class="button" name="item" value="{{item}}">X</button>
+                </form>
+
+
+                <li class="todo-list">
+                    {{item}}
+                </li>
+
+                {{/is_complete}}{{/item}}
+            </ul>
+        </wrapper>
         <h1>Done:</h1>
+
         <ul>
-            {{#complete}}
+            {{#item}} {{#is_complete}}
             <li class="done">
-                {{title}}
+                {{item}}
             </li>
-            {{/complete}}
+            {{/is_complete}}{{/item}}
         </ul>
+        <form action="/delete" method="POST">
+            <button class="doneButton" name="item" type="submit" value="{{item}}">Clear All</button></form>
 
     </section>
 </body>
